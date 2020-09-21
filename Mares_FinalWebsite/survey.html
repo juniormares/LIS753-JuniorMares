@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="shorcut icon" type="image/x-icon" href="favicons/trainer.ico">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<style>
+			body {
+				font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+				background-color:#eee;
+			}
+			.outline {
+				outline:1px solid black;
+			}
+			h5 {
+				padding-top:1em;
+				padding-bottom:1em;
+				background-color:white;
+			}
+			main {
+				word-wrap:break-word;
+				overflow:auto;
+			}
+			#footer {
+				align:center;
+				text-align:center;
+			}
+			#information {
+				background-color:#f5b062;
+			}
+			.rightAlign {
+				text-align:right;
+			}
+			.row {
+				padding-top:.75em;
+				padding-bottom:.75em;
+			}
+			input[type=text] {
+				border-bottom:3px double red;
+				border-right:3px double blue;
+				border-top:3px double green;
+				border-left:3px double yellow;
+				background-image:url('images/pokeLogo.png');
+				background-size:36px;
+				background-repeat:no-repeat;
+				background-position: 0px 4px;
+				padding-left:40px;
+			}
+			input[type=number] {
+				border-bottom:3px double red;
+				border-right:3px double blue;
+				border-top:3px double green;
+				border-left:3px double yellow;
+				background-image:url('images/pokeLogo.png');
+				background-size:36px;
+				background-repeat:no-repeat;
+				background-position: 0px 4px;
+				padding-left:40px;
+			}
+			input[type=tel] {
+				border-bottom:3px double red;
+				border-right:3px double blue;
+				border-top:3px double green;
+				border-left:3px double yellow;
+				background-image:url('images/pokeLogo.png');
+				background-size:36px;
+				background-repeat:no-repeat;
+				background-position: 0px 4px;
+				padding-left:40px;
+			}
+			table {
+				table-layout:fixed;
+				width:100%;
+				border-collapse:collapse;
+				background-color:white;
+				border:3px double black;
+			}
+			td, th {
+				width:25%;
+				text-align:center;
+				border:1px solid #ededed;
+			}
+			tr:nth-child(even) {
+				background-color: #dddddd;
+			}
+			.type-fire {
+				background-color:#F08030;
+			}
+			.type-grass {
+				background-color:#78C850;
+			}
+			.type-water {
+				background-color:#6890F0;
+			}
+			.type-poison {
+				background-color:#A040A0;
+				color:white;
+			}
+			.type-flying {
+				background-color:#A890F0;
+			}
+			.type-bug {
+				background-color:#A8B820;
+			}
+			.type-normal {
+				background-color:#A8A878;
+			}
+			.type-electric {
+				background-color:#F8D030;
+			}
+			.type-ground {
+				background-color:#E0C068;
+			}
+			.type-fairy {
+				background-color:#F0B6BC;
+			}
+			.type-fighting {
+				background-color:#C03028;
+				color:white;
+			}
+			.type-psychic {
+				background-color:#F85888;
+				color:white;
+			}
+			.type-rock {
+				background-color:#B8A038;
+			}
+			.type-ice {
+				background-color:#98D8D8;
+			}
+			.type-ghost {
+				background-color:#705898;
+				color:white;
+			}
+			.type-dragon {
+				background-color:#7038F8;
+				color:white;
+			}
+			a:hover {
+				opacity:1;
+			}
+		</style>
+		<title>Final Website: Survery</title>
+	</head>
+
+	<body>
+		<div class="container">
+			<header class="navbar-brand">
+				<div class="row">
+					<img class="col-sm-1.5" src="images/unknownQuestion.png" style="padding-left:.5em;width:50px;">
+					<img class="col-sm-11" src ="images/pokedexHeader.png">
+				</div>
+				<div class="row justify-content-between">
+					<nav class="navbar navbar-expand-med navbar-light bg-light col-med" style="width:100%;">
+						<a class="navbar-brand">
+							<img src="images/navigate.png" style="width:150px;">
+						</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav mr-auto">
+								<li class="nav-item">
+									<a class="nav-link" href="home.html">
+										<img src="images/masterball.png" style="width:32px;opacity:.5;">
+										&nbsp;Home 
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="kantoPokedex.html">
+										<img src="images/pokedex.png" style="width:32px;opacity:.5;">
+										&nbsp;Kanto Pokedex 
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="bulbasaur.html">
+										<img src="images/bulbasaur.gif" style="width:32px;opacity:.5;">
+										&nbsp;Bulbasaur
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link active" href="survey.html">
+										<img src="images/unknownQuestion.png" style="width:32px;">
+										&nbsp;Survey  <span class="sr-only">(current)</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+				<div style="overflow:hidden;" class="d-flex flex-column mb-5 row">
+					<h1 class="align-self-center p-2" style="font-size:120%;word-wrap:break-word;"><strong>
+						Questions, Concerns, Comments,
+						Survey and Suggestions
+					</strong></h1>
+				</div>
+			</header>
+			
+			<main>
+				<div class="container">
+					<form method="post" action="https://cpscserv.dom.edu/faculty/jhelwig/formConfirm2.php">
+						
+						<div class="form-group">
+						<h4><strong>Contact Info:</strong></h4>
+						<div class="row">
+							<div class="col-lg-2">
+								<label for="fName">First Name </label>
+							</div>
+							<div class="col-lg-2">
+								<input class="form-control" type="text" name="fName" id="fName" size="15" maxlength="40" required><br>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-2">
+								<label for="mInitial">Middle Initial </label>
+							</div>
+							<div class="col-lg-2">
+								<input class="form-control" type="text" name="mInitial" id="mInitial" size="4" maxlength="1"><br>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-2">
+								<label for="lName">Last Name </label>
+							</div>
+							<div class="col-lg-2">
+								<input class="form-control" type="text" name="lName" id="lName" size="15" maxlength="40" required><br>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-2">
+								<label for="age">Age </label>
+							</div>
+							<div class="col-lg-2">
+								<input class="form-control" type="number" min="18" max="110" step="1" name="age" id="age" value="18" required><br>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-2">
+								<label for="email">Email</label>
+							</div>
+							<div class="col-lg-2">
+								<input class="form-control" type="text" name="email" id="email" size="20" maxlength="40" required><br>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-2">
+								<label for="phone">Phone</label>
+							</div>
+							<div class="col-lg-2">
+								<input class="form-control" type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890"><br><br>
+							</div>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<h4><strong>Agree/Disagree</strong></h4>
+						<div class="row" style="background:white;border-bottom:3px double red;border-right:3px double blue;border-top:3px double green;border-left:3px double yellow;">
+							<div class="col"><label>Question:</label></div>
+							<div class="col"><label>Strongly Disagree:</label></div>
+							<div class="col"><label>Disagree:</label></div>
+							<div class="col"><label>Neutral:</label></div>
+							<div class="col"><label>Agree:</label></div>
+							<div class="col"><label>Strongly Agree:</label></div>
+						</div>
+						<div class="row">
+							<div class="col"><label>Do you like/care for the Pok&eacute;mon games?</label></div>
+							<div class="col"><input class="form-control" type="radio" value="StronlyDisagree" name="agreeGames" id="StronlyDisagree"></div>
+							<div class="col"><input class="form-control" type="radio" value="Disagree" name="agreeGames" id="Disagree"></div>
+							<div class="col"><input class="form-control" type="radio" value="Neutral" name="agreeGames" id="Neutral"></div>
+							<div class="col"><input class="form-control" type="radio" value="Agree" name="agreeGames" id="Agree"></div>
+							<div class="col"><input class="form-control" type="radio" value="StronlyAgree" name="agreeGames" id="StronlyAgree"></div>
+						</div>
+						<div class="row">
+							<div class="col"><label>Do you like/care for the Pok&eacute;mon shows?</label></div>
+							<div class="col"><input class="form-control" type="radio" value="StronlyDisagree" name="agreeShows" id="StronlyDisagree"></div>
+							<div class="col"><input class="form-control" type="radio" value="Disagree" name="agreeShows" id="Disagree"></div>
+							<div class="col"><input class="form-control" type="radio" value="Neutral" name="agreeShows" id="Neutral"></div>
+							<div class="col"><input class="form-control" type="radio" value="Agree" name="agreeShows" id="Agree"></div>
+							<div class="col"><input class="form-control" type="radio" value="StronlyAgree" name="agreeShows" id="StronlyAgree"></div>
+						</div>
+						<div class="row">
+							<div class="col"><label>Do you like/care for the Pok&eacute;mon trading cards?</label></div>
+							<div class="col"><input class="form-control" type="radio" value="StronlyDisagree" name="agreeTCG" id="StronlyDisagree"></div>
+							<div class="col"><input class="form-control" type="radio" value="Disagree" name="agreeTCG" id="Disagree"></div>
+							<div class="col"><input class="form-control" type="radio" value="Neutral" name="agreeTCG" id="Neutral"></div>
+							<div class="col"><input class="form-control" type="radio" value="Agree" name="agreeTCG" id="Agree"></div>
+							<div class="col"><input class="form-control" type="radio" value="StronlyAgree" name="agreeTCG" id="StronlyAgree"></div>
+						</div>
+						<div class="row">
+							<div class="col"><label>Do you like/care for the Pok&eacute;mon manga?</label></div>
+							<div class="col"><input class="form-control" type="radio" value="StronlyDisagree" name="agreeManga" id="StronlyDisagree"></div>
+							<div class="col"><input class="form-control" type="radio" value="Disagree" name="agreeManga" id="Disagree"></div>
+							<div class="col"><input class="form-control" type="radio" value="Neutral" name="agreeManga" id="Neutral"></div>
+							<div class="col"><input class="form-control" type="radio" value="Agree" name="agreeManga" id="Agree"></div>
+							<div class="col"><input class="form-control" type="radio" value="StronlyAgree" name="agreeManga" id="StronlyAgree"></div>
+						</div>
+					</div>
+					<div class="form-group">
+						<h4><strong>Comments</strong></h4>
+						<div class="row">
+							<div class="col-lg-2">
+								<label for="comments">Comment on what you liked the <strong>most</strong>:</label>
+							</div>
+						</div>
+						<div class="row">
+								<textarea style="background:white;border-bottom:3px double red;border-right:3px double blue;border-top:3px double green;border-left:3px double yellow;" 
+								class="form-control" name="comments" id="comments" rows="6" c></textarea><br>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<h4><strong>Favorite Pok&eacute;mon?</strong></strong></h4>
+						<label for="nurseORdoctor">What is your <strong>favorite</strong> pok&eacute;mon?
+						<strong>(Original 151)</strong></label>
+						<select style="background:white;border-bottom:3px double red;border-right:3px double blue;border-top:3px double green;border-left:3px double yellow;" 
+						id="nurseORdoctor" name="nurseORdoctor" size="6" class="form-control"> 
+							<option value="bulbasaur">Bulbasaur</option>
+							<option value="Ivysaur">Ivysaur</option>
+							<option value="Venusaur">Venusaur</option>
+							<option value="Charmander">Charmander</option>
+							<option value="Charmeleon">Charmeleon</option>
+							<option value="Charizard">Charizard</option>
+							<option value="Squirtle">Squirtle</option>
+							<option value="Wartotle">Wartotle</option>
+							<option value="Blastoise">Blastoise</option>
+							<option value="Caterpie">Caterpie</option>
+							<option value="Metapod">Metapod</option>
+							<option value="Butterfree">Butterfree</option>
+							<option value="Weedle">Weedle</option>
+							<option value="Kakuna">Kakuna</option>
+							<option value="Beedrill">Beedrill</option>
+							<option value="Pidgey">Pidgey</option>
+							<option value="Pidgeotto">Pidgeotto</option>
+							<option value="Pidgeot">Pidgeot</option>
+							<option value="Rattata">Rattata</option>
+							<option value="Raticate">Raticate</option>
+							<option value="Spearow">Spearow</option>
+							<option value="Fearow">Fearow</option>
+							<option value="Ekans">Ekans</option>
+							<option value="Arbok">Arbok</option>
+							<option value="Pikachu">Pikachu</option>
+							<option value="Raichu">Raichu</option>
+							<option value="Sandshrew">Sandshrew</option>
+							<option value="NidoranGirl">Nidoran&#9792;</option>
+							<option value="Nidorina">Nidorina</option>
+							<option value="Nidoqueen">Nidoqueen</option>
+							<option value="NidoranBoy">Nidoran&#9794;</option>
+							<option value="Nidorino">Nidorino</option>
+							<option value="Nidoking">Nidoking</option>
+							<option value="Clefairy">Clefairy</option>
+							<option value="Clefable">Clefable</option>
+							<option value="Vulpix">Vulpix</option>
+							<option value="Ninetales">Ninetales</option>
+							<option value="Jigglypuff">Jigglypuff</option>
+							<option value="Wigglytuff">Wigglytuff</option>
+							<option value="Zubat">Zubat</option>
+							<option value="Golbat">Golbat</option>
+							<option value="Oddish">Oddish</option>
+							<option value="Gloom">Gloom</option>
+							<option value="Vileplume">Vileplume</option>
+							<option value="Paras">Paras</option>
+							<option value="Parasect">Parasect</option>
+							<option value="Venonat">Venonat</option>
+							<option value="Venomoth">Venomoth</option>
+							<option value="Diglett">Diglett</option>
+							<option value="Dugtrio">Dugtrio</option>
+							<option value="Meowth">Meowth</option>
+							<option value="Persian">Persian</option>
+							<option value="insert">Psyduck</option>
+							<option value="Psyduck">Golduck</option>
+							<option value="Mankey">Mankey</option>
+							<option value="Primeape">Primeape</option>
+							<option value="Growlithe">Growlithe</option>
+							<option value="Arcanine">Arcanine</option>
+							<option value="Poliwag">Poliwag</option>
+							<option value="Poliwhirl">Poliwhirl</option>
+							<option value="Poliwrath">Poliwrath</option>
+							<option value="Abra">Abra</option>
+							<option value="Kadabra">Kadabra</option>
+							<option value="Alakazam">Alakazam</option>
+							<option value="Machop">Machop</option>
+							<option value="Machoke">Machoke</option>
+							<option value="Machamp">Machamp</option>
+							<option value="Bellsprout">Bellsprout</option>
+							<option value="Weepinbell">Weepinbell</option>
+							<option value="Victreebel">Victreebel</option>
+							<option value="Tentacool">Tentacool</option>
+							<option value="Tentacruel">Tentacruel</option>
+							<option value="Geodude">Geodude</option>
+							<option value="Graveler">Graveler</option>
+							<option value="Golem">Golem</option>
+							<option value="Ponyta">Ponyta</option>
+							<option value="Rapidash">Rapidash</option>
+							<option value="Slowpoke">Slowpoke</option>
+							<option value="Slowbro">Slowbro</option>
+							<option value="Magnemite">Magnemite</option>
+							<option value="Magneton">Magneton</option>
+							<option value="Farfetch'd">Farfetch'd</option>
+							<option value="Doduo">Doduo</option>
+							<option value="Dodrio">Dodrio</option>
+							<option value="Seel">Seel</option>
+							<option value="Dewgong">Dewgong</option>
+							<option value="Grimer">Grimer</option>
+							<option value="Muk">Muk</option>
+							<option value="Shellder">Shellder</option>
+							<option value="Cloyster">Cloyster</option>
+							<option value="Gastly">Gastly</option>
+							<option value="Haunter">Haunter</option>
+							<option value="Gengar">Gengar</option>
+							<option value="Onix">Onix</option>
+							<option value="Drowzee">Drowzee</option>
+							<option value="Hypno">Hypno</option>
+							<option value="Krabby">Krabby</option>
+							<option value="Kingler">Kingler</option>
+							<option value="Voltorb">Voltorb</option>
+							<option value="Electrode">Electrode</option>
+							<option value="Exeggcute">Exeggcute</option>
+							<option value="Exeggutor">Exeggutor</option>
+							<option value="Cubone">Cubone</option>
+							<option value="Marowak">Marowak</option>
+							<option value="Hitmonlee">Hitmonlee</option>
+							<option value="Hitmonchan">Hitmonchan</option>
+							<option value="Lickitung">Lickitung</option>
+							<option value="Koffing">Koffing</option>
+							<option value="Weezing">Weezing</option>
+							<option value="Rhyhorn">Rhyhorn</option>
+							<option value="Rhydon">Rhydon</option>
+							<option value="Chansey">Chansey</option>
+							<option value="Tangela">Tangela</option>
+							<option value="Kangashkan">Kangashkan</option>
+							<option value="Horsea">Horsea</option>
+							<option value="Seadra">Seadra</option>
+							<option value="Goldeen">Goldeen</option>
+							<option value="Seaking">Seaking</option>
+							<option value="Staryu">Staryu</option>
+							<option value="Starmie">Starmie</option>
+							<option value="Mr. Mime">Mr. Mime</option>
+							<option value="Scyther">Scyther</option>
+							<option value="Jynx">Jynx</option>
+							<option value="Electabuzz">Electabuzz</option>
+							<option value="Magmar">Magmar</option>
+							<option value="Pinsir">Pinsir</option>
+							<option value="Tauros">Tauros</option>
+							<option value="Magikarp">Magikarp</option>
+							<option value="Gyarados">Gyarados</option>
+							<option value="Lapras">Lapras</option>
+							<option value="Ditto">Ditto</option>
+							<option value="Eevee">Eevee</option>
+							<option value="Vaporeon">Vaporeon</option>
+							<option value="Jolteon">Jolteon</option>
+							<option value="Flareon">Flareon</option>
+							<option value="Porygon">Porygon</option>
+							<option value="Omanyte">Omanyte</option>
+							<option value="Omastar">Omastar</option>
+							<option value="Kabuto">Kabuto</option>
+							<option value="Kabutops">Kabutops</option>
+							<option value="Aerodactyl">Aerodactyl</option>
+							<option value="Snorlax">Snorlax</option>
+							<option value="Articuno">Articuno</option>
+							<option value="Zapdos">Zapdos</option>
+							<option value="Moltres">Moltres</option>
+							<option value="Dratini">Dratini</option>
+							<option value="Dragonair">Dragonair</option>
+							<option value="Dragonite">Dragonite</option>
+							<option value="Mewtwo">Mewtwo</option>
+							<option value="Mew">Mew</option>
+						</select>
+					</div>
+					
+					<div class="form-group">
+						<h4><strong>Favorite character from Pok&eacute;mon?</strong></strong></h4>
+						<label for="nurseORdoctor">What is your <strong>favorite</strong> pok&eacute;mon?
+						<strong>(Original 151)</strong></label>
+						<select style="background:white;border-bottom:3px double red;border-right:3px double blue;border-top:3px double green;border-left:3px double yellow;" 
+						id="nurseORdoctor" name="nurseORdoctor" size="6" class="form-control"> 
+							<option value="Ash">Ash</option>
+							<option value="Misty">Misty</option>
+							<option value="Brock">Brock</option>
+							<option value="Professor Oak">Professor Oak</option>
+							<option value="Gary Oak">Gary Oak</option>
+							<option value="Dawn">Dawn</option>
+							<option value="Red">Red</option>
+							<option value="Wartotle">Officer Jenny</option>
+							<option value="Officer Jenny">Nurse Joy</option>
+							<option value="Serena">Serena</option>
+							<option value="James">James</option>
+							<option value="Jessie">Jessie</option>
+							<option value="Meowth">Meowth</option>
+						</select>
+					</div>
+					
+					<div class="form-group">
+						<legend><strong>What games have you played?</strong></legend>
+						<div class="row">
+							<div class="col">
+							<h6><strong>Mainline RPG</strong></h6>
+							<div class="form-check">
+								<input type="checkbox" id="redGreenBlueVersion" name="redGreenBlueVersion" value="redGreenBlueVersion" class="form-check-input">
+								<label for="redGreenBlueVersion">Red, Green, and Blue (JP only)</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" id="redBlueVersion" name="redBlueVersion" value="redBlueVersion" class="form-check-input">
+								<label for="redBlueVersion">Red and Blue</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" id="yellowVersion" name="yellowVersion" value="yellowVersion" class="form-check-input">
+								<label for="yellowVersion">Yellow</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" id="goldSilverVersion" name="goldSilverVersion" value="goldSilverVersion" class="form-check-input">
+								<label for="goldSilverVersion">Gold and Silver</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" id="crystalVersion" name="crystalVersion" value="crystalVersion" class="form-check-input">
+								<label for="crystalVersion">Diamond and Pearl</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" id="rubySapphireVersion" name="rubySapphireVersion" value="rubySapphireVersion" class="form-check-input">
+								<label for="rubySapphireVersion">Ruby and Sapphire</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" id="emeraldVersion" name="emeraldVersion" value="emeraldVersion" class="form-check-input">
+								<label for="emeraldVersion">Emerald</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" id="diamondPearlVersion" name="diamondPearlVersion" value="diamondPearlVersion" class="form-check-input">
+								<label for="diamondPearlVersion">Diamond and Pearl</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" id="platinumVersion" name="platinumVersion" value="platinumVersion" class="form-check-input">
+								<label for="platinumVersion">Platinum</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" id="blackWhiteVersion" name="blackWhiteVersion" value="blackWhiteVersion" class="form-check-input">
+								<label for="blackWhiteVersion">Black and White</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" id="blackWhite2Version" name="blackWhite2Version" value="blackWhite2Version" class="form-check-input">
+								<label for="blackWhite2Version">Black 2 and White 2</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" id="xyVersion" name="xyVersion" value="xyVersion" class="form-check-input">
+								<label for="xyVersion">X and Y</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" id="sunMoonVersion" name="sunMoonVersion" value="sunMoonVersion" class="form-check-input">
+								<label for="sunMoonVersion">Sun and Moon</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" id="ultraSunMoonVersion" name="ultraSunMoonVersion" value="ultraSunMoonVersion" class="form-check-input">
+								<label for="ultraSunMoonVersion">Ultra Sun and Ultra Moon</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" id="swordShield" name="swordShield" value="swordShield" class="form-check-input">
+								<label for="swordShield">Sword and Shield</label>
+							</div>
+						</div>
+						<div class="col">
+							<h6><strong>Mystery Dungeon</strong></h6>
+							<div class="form-check">
+								<input type="checkbox" id="redBlueRescueTeam" name="redBlueRescueTeam" value="redBlueRescueTeam" class="form-check-input">
+								<label for="redBlueRescueTeam">Blue Rescue Team and Red Rescue Team</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" id="explorersTimeDarkness" name="explorersTimeDarkness" value="explorersTimeDarkness" class="form-check-input">
+								<label for="explorersTimeDarkness">Explorers of Time and Explorers of Darkness</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" id="explorersSky" name="explorersSky" value="explorersSky" class="form-check-input">
+								<label for="explorersSky">Explorers of Sky</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" id="fireStormLight" name="fireStormLight" value="fireStormLight" class="form-check-input">
+								<label for="fireStormLight">Fire/Storm/Light Adventure Team</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" id="gatesToInfinity" name="gatesToInfinity" value="gatesToInfinity" class="form-check-input">
+								<label for="gatesToInfinity">Gates to Infinity</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" id="superMysteryDungeon" name="superMysteryDungeon" value="superMysteryDungeon" class="form-check-input">
+								<label for="superMysteryDungeon">Super Mystery Dungeon</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" id="rescueTeamDX" name="rescueTeamDX" value="rescueTeamDX" class="form-check-input">
+								<label for="rescueTeamDX">Rescue Team DX</label>
+							</div>
+						</div>
+						<div class="col">
+							<h6><strong>Ranger Series</strong></h6>
+							<div class="form-check">
+								<input type="checkbox" id="ranger" name="ranger" value="ranger" class="form-check-input">
+								<label for="ranger">Ranger</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" id="almiaShadows" name="almiaShadows" value="almiaShadows" class="form-check-input">
+								<label for="almiaShadows">Shadows of Almia</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" id="guardianSigns" name="guardianSigns" value="guardianSigns" class="form-check-input">
+								<label for="guardianSigns">Guardian Signs</label>
+							</div>
+						</div>
+						<div class="col">
+							<h6><strong>Other</strong></h6>
+							<div class="form-check">
+								<input type="checkbox" id="pinball" name="pinball" value="pinball" class="form-check-input">
+								<label for="pinball">Pinball</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" id="rumble" name="rumble" value="rumble" class="form-check-input">
+								<label for="rumble">Rumble</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" id="stadium" name="stadium" value="stadium" class="form-check-input">
+								<label for="stadium">Stadium and Stadium 2</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" id="colosseum" name="colosseum" value="colosseum" class="form-check-input">
+								<label for="colosseum">Colossuem</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" id="xdGaleOfDarkness" name="xdGaleOfDarkness" value="xdGaleOfDarkness" class="form-check-input">
+								<label for="xdGaleOfDarkness">XD: Gale of Darkness</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" id="pokemonGo" name="pokemonGo" value="pokemonGo" class="form-check-input">
+								<label for="pokemonGo">Pokemon GO</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" id="pokkenTournament" name="pokkenTournament" value="pokkenTournament" class="form-check-input">
+								<label for="pokkenTournament">Pokk&eacute;n Tournament</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" id="heyYouPikachu" name="heyYouPikachu" value="heyYouPikachu" class="form-check-input">
+								<label for="heyYouPikachu">Hey You, Pikachu!</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" id="letsGo" name="letsGo" value="letsGo" class="form-check-input">
+								<label for="letsGo">Let's Go, Pikachu! and Let's Go, Eevee!</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" id="detectivePikachu" name="detectivePikachu" value="detectivePikachu" class="form-check-input">
+								<label for="detectivePikachu">Detective Pikachu</label>
+							</div>
+						</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<h4><strong>Suggestions</strong></h4>
+						<div class="row">
+							<div class="col-lg-2">
+								<label for="suggestions">Anything you think I can or change?</label>
+							</div>
+						</div>
+						<div class="row">
+								<textarea style="background:white;border-bottom:3px double red;border-right:3px double blue;border-top:3px double green;border-left:3px double yellow;" 
+								class="form-control" name="suggestions" id="suggestions" rows="6" c></textarea><br>
+						</div>
+					</div>
+					<h1>Thank you!</h1>
+					<br><br>
+					<div class="form-group">
+						<input type="submit" value="Submit Form">
+						<input type="reset" value="Clear Form">
+					</div>
+					</form>
+				</div>
+			</main>
+			<div class="row" style="padding-bottom:1em;background-color:#b5cfe8;margin-top:1.5em;margin-bottom:2em;">
+				<div class="col" style="text-align:center;"><a class="footLinks" href="home.html">Home</a></div>
+				|
+				<div class="col" style="text-align:center;"><a class="footLinks" href="kantoPokedex.html">Kanto Dex</a></div>
+				|
+				<div class="col" style="text-align:center;"><a class="footLinks" href="bulbasaur.html">Bulbasaur</a></div>
+				|
+				<div class="col" style="text-align:center;"><a class="footLinks" href="survey.html">Survey</a></div>
+			</div>
+		</div>
+		<script>
+		
+		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	</body>
+</html>

@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="shorcut icon" type="image/x-icon" href="favicons/trainer.ico">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<style>
+			body {
+				font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+				background-color:#eee;
+			}
+			.outline {
+				outline:1px solid black;
+			}
+			h5 {
+				padding-top:1em;
+				padding-bottom:1em;
+				background-color:white;
+			}
+			footer {
+				align:center;
+				text-align:center;
+			}
+			.rightAlign {
+				text-align:right;
+			}
+			.row {
+				padding-top:.75em;
+				padding-bottom:.75em;
+			}
+			input[type=text] {
+				border-bottom:3px double red;
+				border-right:3px double blue;
+				border-top:3px double green;
+				border-left:3px double yellow;
+				background-image:url('images/pokeLogo.png');
+				background-size:36px;
+				background-repeat:no-repeat;
+				background-position: 5px 6px;
+				padding-left:40px;
+			}
+			table {
+				table-layout:fixed;
+				width:100%;
+				border-collapse:collapse;
+				background-color:white;
+				border:3px double black;
+			}
+			td, th {
+				width:25%;
+				text-align:center;
+				border:1px solid #ededed;
+			}
+			tr:nth-child(even) {
+				background-color: #dddddd;
+			}
+			.type-fire {
+				background-color:#F08030;
+			}
+			.type-grass {
+				background-color:#78C850;
+			}
+			.type-water {
+				background-color:#6890F0;
+			}
+			.type-poison {
+				background-color:#A040A0;
+				color:white;
+			}
+			.type-flying {
+				background-color:#A890F0;
+			}
+			.type-bug {
+				background-color:#A8B820;
+			}
+			.type-normal {
+				background-color:#A8A878;
+			}
+			.type-electric {
+				background-color:#F8D030;
+			}
+			.type-ground {
+				background-color:#E0C068;
+			}
+			.type-fairy {
+				background-color:#F0B6BC;
+			}
+			.type-fighting {
+				background-color:#C03028;
+				color:white;
+			}
+			.type-psychic {
+				background-color:#F85888;
+				color:white;
+			}
+			.type-rock {
+				background-color:#B8A038;
+			}
+			.type-ice {
+				background-color:#98D8D8;
+			}
+			.type-ghost {
+				background-color:#705898;
+				color:white;
+			}
+			.type-dragon {
+				background-color:#7038F8;
+				color:white;
+			}
+			a:hover {
+				opacity:1;
+			}
+		</style>
+		<title>Final Website: Kanto Dex</title>
+	</head>
+
+	<body>
+		<div class="container">
+			<header class="navbar-brand">
+				<div class="row">
+					<img class="col-sm-2" src="images/pokedex.png" style="width:90px;">
+					<img class="col-sm-10" src ="images/pokedexHeader.png">
+				</div>
+				<div class="row justify-content-between">
+					<nav class="navbar navbar-expand-med navbar-light bg-light col-med" style="width:35%;">
+						<a class="navbar-brand">
+							<img src="images/navigate.png" style="width:130px;">
+						</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav mr-auto">
+								<li class="nav-item">
+									<a class="nav-link" href="home.html">
+										<img src="images/masterball.png" style="width:32px;opacity:.5;">
+										&nbsp;Home 
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link active" href="kantoPokedex.html">
+										<img src="images/pokedex.png" style="width:32px;">
+										&nbsp;Kanto Pokedex <span class="sr-only">(current)</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="bulbasaur.html">
+										<img src="images/bulbasaur.gif" style="width:32px;opacity:.5;">
+										&nbsp;Bulbasaur
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link " href="survey.html">
+										<img src="images/unknownQuestion.png" style="width:32px;opacity:.5;">
+										&nbsp;Survey
+									</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+					<div style="text-align:right;width:60%;" class="d-flex flex-column mb-3">
+						<h3 class="p-2" class="align-self-center" style="font-size:125%">Kanto Dex: Original 151 Pokemon</h2>
+						<button id="showAndHide">Hide/Show Table</button>
+					</div>
+				</div>
+				<div class="row">
+					<input class="col" class="form-control" type="text" id="myInput" placeholder="Search pokemon here..">
+				</div>
+				
+			</header>
+			
+			<div class="container">
+			<table>
+				<thead>
+					<tr>
+						<th>Sprite</th>
+						<th>Kanto Dex No.</th>
+						<th>Pok&eacute; Name</th>
+						<th>Type 1</th>
+						<th>Type 2 (if applicable)</th>
+					</tr>
+				</thead>
+				<tbody id="myTable">
+					<tr>
+						<td><a href="images/001.png"><img src="images/001.png"></a></td>
+						<td><a href="bulbasaur.html">001</a></td>
+						<td><a href="bulbasaur.html">Bulbasaur</a></td>
+						<td><span class="type-grass">Grass</span></td>
+						<td><span class="type-poison">Poison</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/002.png"></td>
+						<td>002</td>
+						<td>Ivysaur</td>
+						<td><span class="type-grass">Grass</span></td>
+						<td><span class="type-poison">Poison</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/003.png"></td>
+						<td>003</td>
+						<td>Venusaur</td>
+						<td><span class="type-grass">Grass</span></td>
+						<td><span class="type-poison">Poison</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/004.png"></td>
+						<td>004</td>
+						<td>Charmander</td>
+						<td><span class="type-fire">Fire</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/005.png"></td>
+						<td>005</td>
+						<td>Charmeleon</td>
+						<td><span class="type-fire">Fire</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/006.png"></td>
+						<td>006</td>
+						<td>Charizard</td>
+						<td><span class="type-fire">Fire</span></td>
+						<td><span class="type-flying">Flying</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/007.png"></td>
+						<td>007</td>
+						<td>Squirtle</td>
+						<td><span class="type-water">Water</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/008.png"></td>
+						<td>008</td>
+						<td>Wartotle</td>
+						<td><span class="type-water">Water</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/009.png"></td>
+						<td>009</td>
+						<td>Blastoise</td>
+						<td><span class="type-water">Water</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/010.png"></td>
+						<td>010</td>
+						<td>Caterpie</td>
+						<td><span class="type-bug">Bug</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/011.png"></td>
+						<td>011</td>
+						<td>Metapod</td>
+						<td><span class="type-bug">Bug</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/012.png"></td>
+						<td>012</td>
+						<td>Butterfree</td>
+						<td><span class="type-bug">Bug</span></td>
+						<td><span class="type-flying">Flying</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/013.png"></td>
+						<td>013</td>
+						<td>Weedle</td>
+						<td><span class="type-bug">Bug</span></td>
+						<td><span class="type-poison">Poison</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/014.png"></td>
+						<td>014</td>
+						<td>Kakuna</td>
+						<td><span class="type-bug">Bug</span></td>
+						<td><span class="type-poison">Poison</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/015.png"></td>
+						<td>015</td>
+						<td>Beedrill</td>
+						<td><span class="type-bug">Bug</span></td>
+						<td><span class="type-poison">Poison</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/016.png"></td>
+						<td>016</td>
+						<td>Pidgey</td>
+						<td><span class="type-normal">Normal</span></td>
+						<td><span class="type-flying">Flying</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/017.png"></td>
+						<td>017</td>
+						<td>Pidgeotto</td>
+						<td><span class="type-normal">Normal</span></td>
+						<td><span class="type-flying">Flying</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/018.png"></td>
+						<td>018</td>
+						<td>Pidgeot</td>
+						<td><span class="type-normal">Normal</span></td>
+						<td><span class="type-flying">Flying</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/019.png"></td>
+						<td>019</td>
+						<td>Rattata</td>
+						<td><span class="type-normal">Normal</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/020.png"></td>
+						<td>020</td>
+						<td>Raticate</td>
+						<td><span class="type-normal">Normal</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/021.png"></td>
+						<td>021</td>
+						<td>Spearow</td>
+						<td><span class="type-normal">Normal</span></td>
+						<td><span class="type-flying">Flying</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/022.png"></td>
+						<td>022</td>
+						<td>Fearow</td>
+						<td><span class="type-normal">Normal</span></td>
+						<td><span class="type-flying">Flying</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/023.png"></td>
+						<td>023</td>
+						<td>Ekans</td>
+						<td><span class="type-poison">Poison</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/024.png"></td>
+						<td>024</td>
+						<td>Arbok</td>
+						<td><span class="type-poison">Poison</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/025.png"></td>
+						<td>025</td>
+						<td>Pikachu</td>
+						<td><span class="type-electric">Electric</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/026.png"></td>
+						<td>026</td>
+						<td>Raichu</td>
+						<td><span class="type-electric">Electric</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/027.png"></td>
+						<td>027</td>
+						<td>Sandshrew</td>
+						<td><span class="type-ground">Ground</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/028.png"></td>
+						<td>028</td>
+						<td>Sandslash</td>
+						<td><span class="type-ground">Ground</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/029.png"></td>
+						<td>029</td>
+						<td>Nidoran&#9792;</td>
+						<td><span class="type-poison">Poison</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/030.png"></td>
+						<td>030</td>
+						<td>Nidorina</td>
+						<td><span class="type-poison">Poison</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/031.png"></td>
+						<td>031</td>
+						<td>Nidoqueen</td>
+						<td><span class="type-poison">Poison</span></td>
+						<td><span class="type-ground">Ground</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/032.png"></td>
+						<td>032</td>
+						<td>Nidoran&#9794;</td>
+						<td><span class="type-poison">Poison</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/033.png"></td>
+						<td>033</td>
+						<td>Nidorino</td>
+						<td><span class="type-poison">Poison</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/034.png"></td>
+						<td>034</td>
+						<td>Nidoking</td>
+						<td><span class="type-poison">Poison</span></td>
+						<td><span class="type-ground">Ground</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/035.png"></td>
+						<td>035</td>
+						<td>Clefairy</td>
+						<td><span class="type-fairy">Fairy</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/036.png"></td>
+						<td>036</td>
+						<td>Clefable</td>
+						<td><span class="type-fairy">Fairy</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/037.png"></td>
+						<td>037</td>
+						<td>Vulpix</td>
+						<td><span class="type-fire">Fire</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/038.png"></td>
+						<td>038</td>
+						<td>Ninetales</td>
+						<td><span class="type-fire">Fire</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/039.png"></td>
+						<td>039</td>
+						<td>Jigglypuff</td>
+						<td><span class="type-normal">Normal</span></td>
+						<td><span class="type-fairy">Fairy</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/040.png"></td>
+						<td>040</td>
+						<td>Wigglytuff</td>
+						<td><span class="type-normal">Normal</span></td>
+						<td><span class="type-fairy">Fairy</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/041.png"></td>
+						<td>041</td>
+						<td>Zubat</td>
+						<td><span class="type-poison">Poison</span></td>
+						<td><span class="type-flying">Flying</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/042.png"></td>
+						<td>042</td>
+						<td>Golbat</td>
+						<td><span class="type-poison">Poison</span></td>
+						<td><span class="type-flying">Flying</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/043.png"></td>
+						<td>043</td>
+						<td>Oddish</td>
+						<td><span class="type-grass">Grass</span></td>
+						<td><span class="type-poison">Poison</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/044.png"></td>
+						<td>044</td>
+						<td>Gloom</td>
+						<td><span class="type-grass">Grass</span></td>
+						<td><span class="type-poison">Poison</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/045.png"></td>
+						<td>045</td>
+						<td>Vileplume</td>
+						<td><span class="type-grass">Grass</span></td>
+						<td><span class="type-poison">Poison</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/046.png"></td>
+						<td>046</td>
+						<td>Paras</td>
+						<td><span class="type-bug">Bug</span></td>
+						<td><span class="type-grass">Grass</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/047.png"></td>
+						<td>047</td>
+						<td>Parasect</td>
+						<td><span class="type-bug">Bug</span></td>
+						<td><span class="type-grass">Grass</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/048.png"></td>
+						<td>048</td>
+						<td>Venonat</td>
+						<td><span class="type-bug">Bug</span></td>
+						<td><span class="type-poison">Poison</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/049.png"></td>
+						<td>049</td>
+						<td>Venomoth</td>
+						<td><span class="type-bug">Bug</span></td>
+						<td><span class="type-poison">Poison</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/050.png"></td>
+						<td>050</td>
+						<td>Diglett</td>
+						<td><span class="type-ground">Ground</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/051.png"></td>
+						<td>051</td>
+						<td>Dugtrio</td>
+						<td><span class="type-ground">Ground</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/052.png"></td>
+						<td>052</td>
+						<td>Meowth</td>
+						<td><span class="type-normal">Normal</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/053.png"></td>
+						<td>053</td>
+						<td>Persian</td>
+						<td><span class="type-normal">Normal</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/054.png"></td>
+						<td>054</td>
+						<td>Psyduck</td>
+						<td><span class="type-water">Water</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/055.png"></td>
+						<td>055</td>
+						<td>Golduck</td>
+						<td><span class="type-water">Water</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/056.png"></td>
+						<td>056</td>
+						<td>Mankey</td>
+						<td><span class="type-fighting">Fighting</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/057.png"></td>
+						<td>057</td>
+						<td>Primeape</td>
+						<td><span class="type-fighting">Fighting</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/058.png"></td>
+						<td>058</td>
+						<td>Growlithe</td>
+						<td><span class="type-fire">Fire</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/059.png"></td>
+						<td>059</td>
+						<td>Arcanine</td>
+						<td><span class="type-fire">Fire</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/060.png"></td>
+						<td>060</td>
+						<td>Poliwag</td>
+						<td><span class="type-water">Water</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/061.png"></td>
+						<td>061</td>
+						<td>Poliwhirl</td>
+						<td><span class="type-water">Water</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/062.png"></td>
+						<td>062</td>
+						<td>Poliwrath</td>
+						<td><span class="type-water">Water</span></td>
+						<td><span class="type-fighting">Fighting</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/063.png"></td>
+						<td>063</td>
+						<td>Abra</td>
+						<td><span class="type-psychic">Psychic</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/064.png"></td>
+						<td>064</td>
+						<td>Kadabra</td>
+						<td><span class="type-psychic">Psychic</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/065.png"></td>
+						<td>065</td>
+						<td>Alakazam</td>
+						<td><span class="type-psychic">Psychic</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/066.png"></td>
+						<td>066</td>
+						<td>Machop</td>
+						<td><span class="type-fighting">Fighting</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/067.png"></td>
+						<td>067</td>
+						<td>Machoke</td>
+						<td><span class="type-fighting">Fighting</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/068.png"></td>
+						<td>068</td>
+						<td>Machamp</td>
+						<td><span class="type-fighting">Fighting</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/069.png"></td>
+						<td>069</td>
+						<td>Bellsprout</td>
+						<td><span class="type-grass">Grass</span></td>
+						<td><span class="type-poison">Poison</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/070.png"></td>
+						<td>070</td>
+						<td>Weepinbell</td>
+						<td><span class="type-grass">Grass</span></td>
+						<td><span class="type-poison">Poison</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/071.png"></td>
+						<td>071</td>
+						<td>Victreebel</td>
+						<td><span class="type-grass">Grass</span></td>
+						<td><span class="type-poison">Poison</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/072.png"></td>
+						<td>072</td>
+						<td>Tentacool</td>
+						<td><span class="type-water">Water</span></td>
+						<td><span class="type-poison">Poison</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/073.png"></td>
+						<td>073</td>
+						<td>Tentacruel</td>
+						<td><span class="type-water">Water</span></td>
+						<td><span class="type-poison">Poison</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/074.png"></td>
+						<td>074</td>
+						<td>Geodude</td>
+						<td><span class="type-rock">Rock</span></td>
+						<td><span class="type-ground">Ground</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/075.png"></td>
+						<td>075</td>
+						<td>Graveler</td>
+						<td><span class="type-rock">Rock</span></td>
+						<td><span class="type-ground">Ground</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/076.png"></td>
+						<td>076</td>
+						<td>Golem</td>
+						<td><span class="type-rock">Rock</span></td>
+						<td><span class="type-ground">Ground</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/077.png"></td>
+						<td>077</td>
+						<td>Ponyta</td>
+						<td><span class="type-water">Water</span></td>
+						<td><span class="type-ground">Psychic</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/078.png"></td>
+						<td>078</td>
+						<td>Rapidash</td>
+						<td><span class="type-water">Water</span></td>
+						<td><span class="type-ground">Psychic</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/079.png"></td>
+						<td>079</td>
+						<td>Slowpoke</td>
+						<td><span class="type-poison">Poison</span></td>
+						<td><span class="type-psychic">Psychic</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/080.png"></td>
+						<td>080</td>
+						<td>Slowbro</td>
+						<td><span class="type-poison">Poison</span></td>
+						<td><span class="type-psychic">Psychic</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/081.png"></td>
+						<td>081</td>
+						<td>Magnemite</td>
+						<td><span class="type-fire">Fire</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/082.png"></td>
+						<td>082</td>
+						<td>Magneton</td>
+						<td><span class="type-fire">Fire</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/083.png"></td>
+						<td>083</td>
+						<td>Farfetch'd</td>
+						<td><span class="type-normal">Normal</span></td>
+						<td><span class="type-flying">Flying</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/084.png"></td>
+						<td>084</td>
+						<td>Doduo</td>
+						<td><span class="type-normal">Normal</span></td>
+						<td><span class="type-flying">Flying</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/085.png"></td>
+						<td>085</td>
+						<td>Dodrio</td>
+						<td><span class="type-normal">Normal</span></td>
+						<td><span class="type-flying">Flying</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/086.png"></td>
+						<td>086</td>
+						<td>Seel</td>
+						<td><span class="type-water">Water</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/087.png"></td>
+						<td>087</td>
+						<td>Dewgong</td>
+						<td><span class="type-water">Water</span></td>
+						<td><span class="type-ice">Ice</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/088.png"></td>
+						<td>088</td>
+						<td>Grimer</td>
+						<td><span class="type-poison">Poison</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/089.png"></td>
+						<td>089</td>
+						<td>Muk</td>
+						<td><span class="type-poison">Poison</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/090.png"></td>
+						<td>090</td>
+						<td>Shellder</td>
+						<td><span class="type-water">Water</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/091.png"></td>
+						<td>091</td>
+						<td>Cloyster</td>
+						<td><span class="type-water">Water</span></td>
+						<td><span class="type-ice">Ice</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/092.png"></td>
+						<td>092</td>
+						<td>Gastly</td>
+						<td><span class="type-ghost">Ghost</span></td>
+						<td><span class="type-poison">Poison</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/093.png"></td>
+						<td>093</td>
+						<td>Haunter</td>
+						<td><span class="type-ghost">Ghost</span></td>
+						<td><span class="type-poison">Poison</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/094.png"></td>
+						<td>094</td>
+						<td>Gengar</td>
+						<td><span class="type-ghost">Ghost</span></td>
+						<td><span class="type-poison">Poison</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/095.png"></td>
+						<td>095</td>
+						<td>Onix</td>
+						<td><span class="type-rock">Rock</span></td>
+						<td><span class="type-ground">Ground</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/096.png"></td>
+						<td>096</td>
+						<td>Drowzee</td>
+						<td><span class="type-psychic">Psychic</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/097.png"></td>
+						<td>097</td>
+						<td>Hypno</td>
+						<td><span class="type-psychic">Psychic</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/098.png"></td>
+						<td>098</td>
+						<td>Krabby</td>
+						<td><span class="type-water">Water</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td>q</td>
+						<td>099</td>
+						<td>Kingler</td>
+						<td><span class="type-water">Water</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/100.png"></td>
+						<td>100</td>
+						<td>Voltorb</td>
+						<td><span class="type-electric">Electric</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/101.png"></td>
+						<td>101</td>
+						<td>Electrode</td>
+						<td><span class="type-electric">Electric</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/102.png"></td>
+						<td>102</td>
+						<td>Exeggcute</td>
+						<td><span class="type-grass">Grass</span></td>
+						<td><span class="type-ground">Psychic</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/103.png"></td>
+						<td>103</td>
+						<td>Exeggutor</td>
+						<td><span class="type-grass">Grass</span></td>
+						<td><span class="type-ground">Psychic</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/104.png"></td>
+						<td>104</td>
+						<td>Cubone</td>
+						<td><span class="type-ground">Ground</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/105.png"></td>
+						<td>105</td>
+						<td>Marowak</td>
+						<td><span class="type-ground">Ground</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/106.png"></td>
+						<td>106</td>
+						<td>Hitmonlee</td>
+						<td><span class="type-fighting">Fighting</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/107.png"></td>
+						<td>107</td>
+						<td>Hitmonchan</td>
+						<td><span class="type-fighting">Fighting</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/108.png"></td>
+						<td>108</td>
+						<td>Lickitung</td>
+						<td><span class="type-normal">Normal</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/109.png"></td>
+						<td>109</td>
+						<td>Koffing</td>
+						<td><span class="type-poison">Poison</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/110.png"></td>
+						<td>110</td>
+						<td>Weezing</td>
+						<td><span class="type-poison">Poison</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/111.png"></td>
+						<td>111</td>
+						<td>Rhyhorn</td>
+						<td><span class="type-ground">Ground</span></td>
+						<td><span class="type-rock">Rock</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/112.png"></td>
+						<td>112</td>
+						<td>Rhydon</td>
+						<td><span class="type-ground">Ground</span></td>
+						<td><span class="type-rock">Rock</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/113.png"></td>
+						<td>113</td>
+						<td>Chansey</td>
+						<td><span class="type-normal">Normal</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/114.png"></td>
+						<td>114</td>
+						<td>Tangela</td>
+						<td><span class="type-grass">Grass</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/115.png"></td>
+						<td>115</td>
+						<td>Kangashkan</td>
+						<td><span class="type-normal">Normal</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/116.png"></td>
+						<td>116</td>
+						<td>Horsea</td>
+						<td><span class="type-water">Water</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/117.png"></td>
+						<td>117</td>
+						<td>Seadra</td>
+						<td><span class="type-water">Water</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/118.png"></td>
+						<td>118</td>
+						<td>Goldeen</td>
+						<td><span class="type-water">Water</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/119.png"></td>
+						<td>119</td>
+						<td>Seaking</td>
+						<td><span class="type-water">Water</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/120.png"></td>
+						<td>120</td>
+						<td>Staryu</td>
+						<td><span class="type-water">Water</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/121.png"></td>
+						<td>121</td>
+						<td>Starmie</td>
+						<td><span class="type-water">Water</span></td>
+						<td><span class="type-psychic">Psychic</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/122.png"></td>
+						<td>122</td>
+						<td>Mr. Mime</td>
+						<td><span class="type-psychic">Psychic</span></td>
+						<td><span class="type-fairy">Fairy</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/123.png"></td>
+						<td>123</td>
+						<td>Scyther</td>
+						<td><span class="type-bug">Bug</span></td>
+						<td><span class="type-flying">Flying</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/124.png"></td>
+						<td>124</td>
+						<td>Jynx</td>
+						<td><span class="type-ice">Ice</span></td>
+						<td><span class="type-psychic">Psychic</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/125.png"></td>
+						<td>125</td>
+						<td>Electabuzz</td>
+						<td><span class="type-electric">Electric</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/126.png"></td>
+						<td>126</td>
+						<td>Magmar</td>
+						<td><span class="type-fire">Fire</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/127.png"></td>
+						<td>127</td>
+						<td>Pinsir</td>
+						<td><span class="type-bug">Bug</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/128.png"></td>
+						<td>128</td>
+						<td>Tauros</td>
+						<td><span class="type-normal">Normal</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/129.png"></td>
+						<td>129</td>
+						<td>Magikarp</td>
+						<td><span class="type-water">Water</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/130.png"></td>
+						<td>130</td>
+						<td>Gyarados</td>
+						<td><span class="type-water">Water</span></td>
+						<td><span class="type-flying">Flying</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/131.png"></td>
+						<td>131</td>
+						<td>Lapras</td>
+						<td><span class="type-water">Water</span></td>
+						<td><span class="type-ice">Ice</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/132.png"></td>
+						<td>132</td>
+						<td>Ditto</td>
+						<td><span class="type-normal">Normal</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/133.png"></td>
+						<td>133</td>
+						<td>Eevee</td>
+						<td><span class="type-normal">Normal</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/134.png"></td>
+						<td>134</td>
+						<td>Vaporeon</td>
+						<td><span class="type-water">Water</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/135.png"></td>
+						<td>135</td>
+						<td>Jolteon</td>
+						<td><span class="type-electric">Electric</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/136.png"></td>
+						<td>136</td>
+						<td>Flareon</td>
+						<td><span class="type-fire">Fire</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/137.png"></td>
+						<td>137</td>
+						<td>Porygon</td>
+						<td><span class="type-normal">Normal</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/138.png"></td>
+						<td>138</td>
+						<td>Omanyte</td>
+						<td><span class="type-rock">Rock</span></td>
+						<td><span class="type-water">Water</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/139.png"></td>
+						<td>139</td>
+						<td>Omastar</td>
+						<td><span class="type-rock">Rock</span></td>
+						<td><span class="type-water">Water</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/140.png"></td>
+						<td>140</td>
+						<td>Kabuto</td>
+						<td><span class="type-rock">Rock</span></td>
+						<td><span class="type-water">Water</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/141.png"></td>
+						<td>141</td>
+						<td>Kabutops</td>
+						<td><span class="type-rock">Rock</span></td>
+						<td><span class="type-water">Water</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/142.png"></td>
+						<td>142</td>
+						<td>Aerodactyl</td>
+						<td><span class="type-rock">Rock</span></td>
+						<td><span class="type-flying">Flying</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/143.png"></td>
+						<td>143</td>
+						<td>Snorlax</td>
+						<td><span class="type-normal">Normal</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/144.png"></td>
+						<td>144</td>
+						<td>Articuno</td>
+						<td><span class="type-ice">Ice</span></td>
+						<td><span class="type-flying">Flying</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/145.png"></td>
+						<td>145</td>
+						<td>Zapdos</td>
+						<td><span class="type-electric">Electric</span></td>
+						<td><span class="type-flying">Flying</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/146.png"></td>
+						<td>146</td>
+						<td>Moltres</td>
+						<td><span class="type-fire">Fire</span></td>
+						<td><span class="type-flying">Flying</span></td>
+					</tr>
+					<tr>
+						<td><img src="images/147.png"></td>
+						<td>147</td>
+						<td>Dratini</td>
+						<td><span class="type-dragon">Dragon</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/148.png"></td>
+						<td>148</td>
+						<td>Dragonair</td>
+						<td><span class="type-dragon">Dragon</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/149.png"></td>
+						<td>149</td>
+						<td>Dragonite</td>
+						<td><span class="type-dragon">Dragon</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/150.png"></td>
+						<td>150</td>
+						<td>Mewtwo</td>
+						<td><span class="type-psychic">Psychic</span></td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td><img src="images/151.png"></td>
+						<td>151</td>
+						<td>Mew</td>
+						<td><span class="type-psychic">Psychic</span></td>
+						<td>-</td>
+					</tr>
+				</tbody>
+			</table>
+			</div>
+			<div class="row"  style="padding-bottom:1em;background-color:#b5cfe8;margin-top:1.5em;margin-bottom:2em;">
+				<div class="col" style="text-align:center;"><a class="footLinks" href="home.html">Home</a></div>
+				|
+				<div class="col" style="text-align:center;"><a class="footLinks" href="kantoPokedex.html">Kanto Dex</a></div>
+				|
+				<div class="col" style="text-align:center;"><a class="footLinks" href="bulbasaur.html">Bulbasaur</a></div>
+				|
+				<div class="col" style="text-align:center;"><a class="footLinks" href="home.html">Home</a></div>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#myInput").on("keyup", function() {
+					var value = $(this).val().toLowerCase();
+					$("#myTable tr").filter(function() {
+					$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+					});
+				});
+			});
+			$("#showAndHide").click(function(){
+				$("table").toggle();
+				
+			});
+		</script>
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	</body>
+</html>
