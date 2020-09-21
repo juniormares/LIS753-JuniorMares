@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="shorcut icon" type="image/x-icon" href="favicons/trainer.ico">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<style>
+			body {
+				font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+				background-color:#eee;
+			}
+			.outline {
+				outline:1px solid black;
+			}
+			h5 {
+				padding-top:1em;
+				padding-bottom:1em;
+				background-color:white;
+			}
+			main {
+				word-wrap:break-word;
+				overflow:auto;
+			}
+			#footer {
+				align:center;
+				text-align:center;
+			}
+			#information {
+				background-color:#f5b062;
+			}
+			.rightAlign {
+				text-align:right;
+			}
+			.row {
+				padding-top:.75em;
+				padding-bottom:.75em;
+			}
+			input[type=text] {
+				border-bottom:3px double red;
+				border-right:3px double blue;
+				border-top:3px double green;
+				border-left:3px double yellow;
+				background-image:url('images/pokeLogo.png');
+				background-size:36px;
+				background-repeat:no-repeat;
+				background-position: 5px 6px;
+				padding-left:40px;
+			}
+			table {
+				table-layout:fixed;
+				width:100%;
+				border-collapse:collapse;
+				background-color:white;
+				border:3px double black;
+			}
+			td, th {
+				width:25%;
+				text-align:center;
+				border:1px solid #ededed;
+			}
+			tr:nth-child(even) {
+				background-color: #dddddd;
+			}
+			.type-fire {
+				background-color:#F08030;
+			}
+			.type-grass {
+				background-color:#78C850;
+			}
+			.type-water {
+				background-color:#6890F0;
+			}
+			.type-poison {
+				background-color:#A040A0;
+				color:white;
+			}
+			.type-flying {
+				background-color:#A890F0;
+			}
+			.type-bug {
+				background-color:#A8B820;
+			}
+			.type-normal {
+				background-color:#A8A878;
+			}
+			.type-electric {
+				background-color:#F8D030;
+			}
+			.type-ground {
+				background-color:#E0C068;
+			}
+			.type-fairy {
+				background-color:#F0B6BC;
+			}
+			.type-fighting {
+				background-color:#C03028;
+				color:white;
+			}
+			.type-psychic {
+				background-color:#F85888;
+				color:white;
+			}
+			.type-rock {
+				background-color:#B8A038;
+			}
+			.type-ice {
+				background-color:#98D8D8;
+			}
+			.type-ghost {
+				background-color:#705898;
+				color:white;
+			}
+			.type-dragon {
+				background-color:#7038F8;
+				color:white;
+			}
+			a:hover {
+				opacity:1;
+			}
+		</style>
+		<title>Final Website: Bulbasaur</title>
+	</head>
+
+	<body>
+		<div class="container">
+			<header class="navbar-brand">
+				<div class="row">
+					<img class="col-sm-2" src="images/bulbasaur.gif" style="width:90px;">
+					<img class="col-sm-10" src ="images/pokedexHeader.png">
+				</div>
+				<div class="row justify-content-between">
+					<nav class="navbar navbar-expand-med navbar-light bg-light col-med" style="width:100%;">
+						<a class="navbar-brand">
+							<img src="images/navigate.png" style="width:150px;">
+						</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav mr-auto">
+								<li class="nav-item">
+									<a class="nav-link" href="home.html">
+										<img src="images/masterball.png" style="width:32px;">
+										&nbsp;Home 
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="kantoPokedex.html">
+										<img src="images/pokedex.png" style="width:32px;opacity:.5;">
+										&nbsp;Kanto Pokedex 
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link active" href="bulbasaur.html">
+										<img src="images/bulbasaur.gif" style="width:32px;opacity:.5;">
+										&nbsp;Bulbasaur <span class="sr-only">(current)</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link " href="survey.html">
+										<img src="images/unknownQuestion.png" style="width:32px;opacity:.5;">
+										&nbsp;Survey
+									</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+				<div style="overflow:hidden;" class="d-flex flex-column mb-5">
+					<h2 class="align-self-center p-2" style="font-size:250%;word-wrap:break-word;"><strong>
+						Entry 001: Bulbasaur
+					</strong></h2>
+				</div>
+			</header>
+			
+			<main>
+				<div class="container">
+					<h4>
+						<center>Play these sounds to make bulbasaur speak!</center>
+					</h4>
+					<div class="row">
+						<button class="col form-control" onclick="document.getElementById('one').play()">
+						<img src="images/sound.png" style="width:25px;">1</button>
+						<audio id="one" src="sounds/1.mp3"></audio>
+						<button class="col form-control" onclick="document.getElementById('two').play()">
+						<img src="images/sound.png" style="width:25px;">2</button>
+						<audio id="two" src="sounds/2.mp3"></audio>
+						<button class="col form-control" onclick="document.getElementById('three').play()">
+						<img src="images/sound.png" style="width:25px;">3</button>
+						<audio id="three" src="sounds/3.mp3"></audio>
+						<button class="col form-control" onclick="document.getElementById('four').play()">
+						<img src="images/sound.png" style="width:25px;">4</button>
+						<audio id="four" src="sounds/4.mp3"></audio>
+						<button class="col form-control" onclick="document.getElementById('five').play()">
+						<img src="images/sound.png" style="width:25px;">5</button>
+						<audio id="five" src="sounds/5.mp3"></audio>
+					</div>
+					<div style="background-color:#f5b062;float:right;width:40%;border:2px solid #a65902">
+						<img src="images/bulbasaurVinewhip.png" style="background-color:#eee;width:80%;margin:1.65em;border:2px solid #a65902">
+						<table style="width:85%;margin:1.5em;border:3px double #a65902;font-size:88%;">
+							<tbody>
+								<tr style="height:60px">
+									<td>Dex Entry:</td>
+								</tr>
+								<tr>
+									<td style="padding:1em;">A strange seed was planted on its back at birth. The plant sprouts
+									and grows with this Pokémon. It can go for days without eating a single
+									morsel. In the bulb on its back, it stores energy. The bulb-like pouch
+									on its back grows larger as it ages. The pouch is filled with numerous
+									seeds.</td>
+								</tr>
+							</tbody>
+						</table>
+						<table style="width:85%;margin:1.5em;border:3px double #a65902;font-size:80%;">
+							<tbody>
+								<tr style="height:60px">
+									<td>Classification</td>
+									<td>Seed Pokemon</td>
+								</tr>
+								<tr style="height:60px">
+									<td>Height</td>
+									<td>2'04" (0.7m)</td>
+								</tr>
+								<tr style="height:60px">
+									<td>Weight</td>
+									<td>15.2lbs (6.9kg)</td>
+								</tr>
+								<tr style="height:60px">
+									<td>Capture Rate</td>
+									<td>45</td>
+								</tr>
+								<tr style="height:60px">
+									<td>Gender Ratio</td>
+									<td>Male<font color="#499FFF">♂</font>:	88.1%
+										<br>
+										Female<font color="#F6814A">♀</font>:	11.9%
+									</td>
+								</tr>
+								<tr style="height:60px">
+									<td>Type</td>
+									<td><span class="type-grass">Grass</span>
+										<span class="type-poison">Poison</span>
+									</td>
+								</tr>
+								<tr style="height:60px">
+									<td>Height</td>
+									<td>This</td>
+								</tr>
+								<tr style="height:60px">
+									<td>Abilities</td>
+									<td>Overgrowth
+										Chlorophyll</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					
+					<div style="border:3px double green;padding:2em;float:left;width:58%;">
+					Bulbasaur is a small, quadruped Pokémon that has blue-green skin with darker patches. 
+					It has red eyes with white pupils, pointed, ear-like structures on top of its head, and
+					a short, blunt snout with a wide mouth. A pair of small, pointed teeth are visible in 
+					the upper jaw when its mouth is open. Each of its thick legs ends with three sharp claws. 
+					On its back is a green plant bulb, which is grown from a seed planted there at birth. 
+					The bulb provides it with energy through photosynthesis as well as from the nutrient-rich
+					seeds contained within.
+					<br><br>
+					As mentioned in the anime, starter Pokémon are raised by Breeders to be distributed to
+					new Trainers. Having been domesticated from birth, Bulbasaur is regarded as both a rare
+					and well-behaved Pokémon. It is known to be extremely loyal, even after long-term
+					abandonment. Bulbasaur has also shown itself to be an excellent caretaker, even having
+					a special technique called the "Bulba-by." To perform this technique, Bulbasaur uses
+					its vines to pick up a young Pokémon and soothingly rocks it in the air.
+					<br><br>
+					It is found in grasslands and forests throughout the Kanto region. However, due to 
+					Bulbasaur's status as starter Pokémon, it is hard to come by in the wild and generally
+					found under the ownership of a Trainer. It has been observed that a Bulbasaur's bulb 
+					will flash blue when it is ready to evolve. If it does not want to evolve, it struggles
+					to resist the transformation. Many Bulbasaur gather every year in a hidden garden in 
+					Kanto to evolve into Ivysaur in a ceremony led by a Venusaur. Bulbasaur and its evolved
+					forms are the only known Pokémon capable of learning Vine Whip.
+					</div>
+				</div>
+			</main>
+			<div class="row" style="padding-bottom:1em;background-color:#b5cfe8;margin-top:1.5em;margin-bottom:2em;">
+				<div class="col" style="text-align:center;"><a class="footLinks" href="home.html">Home</a></div>
+				|
+				<div class="col" style="text-align:center;"><a class="footLinks" href="kantoPokedex.html">Kanto Dex</a></div>
+				|
+				<div class="col" style="text-align:center;"><a class="footLinks" href="bulbasaur.html">Bulbasaur</a></div>
+				|
+				<div class="col" style="text-align:center;"><a class="footLinks" href="survey.html">Survey</a></div>
+			</div>
+		</div>
+		<script>
+		
+		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	</body>
+</html>
