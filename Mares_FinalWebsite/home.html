@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="shorcut icon" type="image/x-icon" href="favicons/trainer.ico">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<style>
+			body {
+				font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+				background-color:#eee;
+			}
+			.outline {
+				outline:1px solid black;
+			}
+			h5 {
+				padding-top:1em;
+				padding-bottom:1em;
+				background-color:white;
+			}
+			footer {
+				align:center;
+				text-align:center;
+			}
+			.rightAlign {
+				text-align:right;
+			}
+			.row {
+				padding-top:.75em;
+				padding-bottom:.75em;
+			}
+			input[type=text] {
+				border-bottom:3px double red;
+				border-right:3px double blue;
+				border-top:3px double green;
+				border-left:3px double yellow;
+				background-image:url('images/pokeLogo.png');
+				background-size:36px;
+				background-repeat:no-repeat;
+				background-position: 5px 6px;
+				padding-left:40px;
+			}
+			table {
+				table-layout:fixed;
+				width:100%;
+				border-collapse:collapse;
+				background-color:white;
+				border:3px double black;
+			}
+			td, th {
+				width:25%;
+				text-align:center;
+				border:1px solid #ededed;
+			}
+			tr:nth-child(even) {
+				background-color: #dddddd;
+			}
+			.type-fire {
+				background-color:#F08030;
+			}
+			.type-grass {
+				background-color:#78C850;
+			}
+			.type-water {
+				background-color:#6890F0;
+			}
+			.type-poison {
+				background-color:#A040A0;
+				color:white;
+			}
+			.type-flying {
+				background-color:#A890F0;
+			}
+			.type-bug {
+				background-color:#A8B820;
+			}
+			.type-normal {
+				background-color:#A8A878;
+			}
+			.type-electric {
+				background-color:#F8D030;
+			}
+			.type-ground {
+				background-color:#E0C068;
+			}
+			.type-fairy {
+				background-color:#F0B6BC;
+			}
+			.type-fighting {
+				background-color:#C03028;
+				color:white;
+			}
+			.type-psychic {
+				background-color:#F85888;
+				color:white;
+			}
+			.type-rock {
+				background-color:#B8A038;
+			}
+			.type-ice {
+				background-color:#98D8D8;
+			}
+			.type-ghost {
+				background-color:#705898;
+				color:white;
+			}
+			.type-dragon {
+				background-color:#7038F8;
+				color:white;
+			}
+			a:hover {
+				opacity:1;
+			}
+		</style>
+		<title>Final Website: Home</title>
+	</head>
+
+	<body>
+		<div class="container">
+			<header class="navbar-brand">
+				<div class="row">
+					<img class="col-sm-2" src="images/masterball.png" style="width:90px;">
+					<img class="col-sm-10" src ="images/pokedexHeader.png">
+				</div>
+				<div class="row justify-content-between">
+					<nav class="navbar navbar-expand-med navbar-light bg-light col-med" style="width:100%;">
+						<a class="navbar-brand">
+							<img src="images/navigate.png" style="width:150px;">
+						</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav mr-auto">
+								<li class="nav-item active">
+									<a class="nav-link" href="home.html">
+										<img src="images/masterball.png" style="width:32px;">
+										&nbsp;Home <span class="sr-only">(current)</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="kantoPokedex.html">
+										<img src="images/pokedex.png" style="width:32px;opacity:.5;">
+										&nbsp;Kanto Pokedex
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="bulbasaur.html">
+										<img src="images/bulbasaur.gif" style="width:32px;opacity:.5;">
+										&nbsp;Bulbasaur
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link " href="survey.html">
+										<img src="images/unknownQuestion.png" style="width:32px;opacity:.5;">
+										&nbsp;Survey
+									</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+				<div style="overflow:hidden;" class="d-flex flex-column mb-5">
+					<h4 class="align-self-center p-2" style="font-size:165%;word-wrap:break-word;"><strong>
+						Welcome to Junior's Original 151 Pokedex
+					</strong></h4>
+				</div>
+			</header>
+
+			<div class="container">
+				<center><h5 style="border:3px double yellow;padding-left:1em;padding-right:1em;">
+					We did it, boys! Ash has won the pokemon league!
+				</h5></center>
+				<img src="images/ashPokemonLeague.jpg" style="width:100%;border:5px double black;">
+
+				<br><br>
+
+				<center><h5 style="border:3px double green;padding-left:1em;padding-right:1em;">
+					I'm very happy to present this website to you all! Here is a fan-made pokedex website
+					<strong>made by and for fans</strong>. Come learn some web dev languages as we explore Junior's Pokedex
+					Fan-site!
+				</h5></center>
+
+				<center><h5 style="border:3px double blue;padding-left:1em;padding-right:1em;">
+					We have lots to offer like our <a href="home.html">home page</a>, which isn't much but take a look at some of
+					songs below! I have embedded some Spotify links for you all to go and enjoy some pokemon
+					music!  Did you guys wanna see all 151 original pokemon? Head over to the <a href="kantoPokedex.html">Kanto Dex</a>
+					in the navigation toolbar.
+				</h5></center>
+
+				<div class="row">
+					<iframe class="col" src="https://open.spotify.com/embed/track/3OIHgTyQdiAGMmpjQaNxp3" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+					<iframe class="col" src="https://open.spotify.com/embed/album/464lRijS3n1mBjwj6q3cCx" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+				</div>
+
+				<center><h5 style="border:3px double red;padding-left:1em;padding-right:1em;">
+					Did you want to learn more about <a href="bulbasaur.html">bulbasaur</a>? Well visit his page in the navigation bar! I
+					was not about to write a page for every single pokemon so I just chose the first dude.
+					Hopefully, if you didn't know something about him, you know now! If you notice he dances at
+					the top left corner of his page!
+				</h5></center>
+			</div>
+			<div class="row" style="padding-bottom:1em;background-color:#b5cfe8;margin-top:1.5em;margin-bottom:2em;">
+				<div class="col" style="text-align:center;"><a class="footLinks" href="home.html">Home</a></div>
+				|
+				<div class="col" style="text-align:center;"><a class="footLinks" href="kantoPokedex.html">Kanto Dex</a></div>
+				|
+				<div class="col" style="text-align:center;"><a class="footLinks" href="bulbasaur.html">Bulbasaur</a></div>
+				|
+				<div class="col" style="text-align:center;"><a class="footLinks" href="survey.html">Survey</a></div>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	</body>
+</html>
