@@ -1,0 +1,53 @@
+body {
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  background-color:#eee;
+}
+.outline {
+  outline:1px solid black;
+}
+h5 {
+  padding-top:1em;
+  padding-bottom:1em;
+  background-color:white;
+}
+footer {
+  align:center;
+  text-align:center;
+}
+.rightAlign {
+  text-align:right;
+}
+.row {
+  padding-top:.75em;
+  padding-bottom:.75em;
+}
+input[type=text] {
+  border-bottom:3px double red;
+  border-right:3px double blue;
+  border-top:3px double green;
+  border-left:3px double yellow;
+  background-image:url('images/pokeLogo.png');
+  background-size:36px;
+  background-repeat:no-repeat;
+  background-position: 5px 6px;
+  padding-left:40px;
+}
+table {
+  table-layout:fixed;
+  width:100%;
+  border-collapse:collapse;
+  background-color:white;
+  border:3px double black;
+}
+td, th {
+  width:25%;
+  text-align:center;
+  border:1px solid #ededed;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+a:hover {
+  opacity:1;
+}
