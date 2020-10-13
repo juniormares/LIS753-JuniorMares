@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 .grid{width:100%;margin-top:-11px}.grid-overlay{position:absolute;top:0;left:0;right:0;background:#fff;width:100%;bottom:0;z-index:10}.grid-item,.grid-sizer{width:100%;margin-bottom:1%}@media (min-width:768px){.grid-item,.grid-sizer{width:49.5%}}@media (min-width:1200px){.grid-item,
 .grid-sizer{width:32.633%}}.gutter-sizer{width:1%}.grid-item{position:relative;display:block}
 .grid-item .project-description{opacity:0;-webkit-transition:all .3s linear;-o-transition:all .3s linear;transition:all .3s linear;background:hsla(0,0%,100%,.5);position:absolute;width:90%;top:0;bottom:0;left:0;right:0;margin:5%;text-decoration:none}
@@ -20,6 +21,8 @@ p {
 div {
   background-color:#c06c84;
 =======
+=======
+>>>>>>> Stashed changes
 body {
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
   background-color:#a1bbff;
@@ -134,5 +137,8 @@ tr:nth-child(even) {
 }
 a:hover {
   opacity:1;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 }
