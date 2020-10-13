@@ -1,6 +1,7 @@
 body {
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   color:#f8b195;
 }
 p {
@@ -15,6 +16,8 @@ h3 {
 div {
   background-color:#c06c84
 =======
+=======
+>>>>>>> Stashed changes
   background-color:#f8b195;
 }
 h1 {
@@ -28,5 +31,8 @@ p {
 }
 div {
   color:#c06c84;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 }
