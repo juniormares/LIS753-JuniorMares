@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 .grid{width:100%;margin-top:-11px}.grid-overlay{position:absolute;top:0;left:0;right:0;background:#fff;width:100%;bottom:0;z-index:10}.grid-item,.grid-sizer{width:100%;margin-bottom:1%}@media (min-width:768px){.grid-item,.grid-sizer{width:49.5%}}@media (min-width:1200px){.grid-item,
 .grid-sizer{width:32.633%}}.gutter-sizer{width:1%}.grid-item{position:relative;display:block}
 .grid-item .project-description{opacity:0;-webkit-transition:all .3s linear;-o-transition:all .3s linear;transition:all .3s linear;background:hsla(0,0%,100%,.5);position:absolute;width:90%;top:0;bottom:0;left:0;right:0;margin:5%;text-decoration:none}
@@ -18,4 +19,120 @@ p {
 }
 div {
   background-color:#c06c84;
+=======
+body {
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  background-color:#a1bbff;
+}
+.outline {
+  outline:1px solid black;
+}
+h5 {
+  padding-top:1em;
+  padding-bottom:1em;
+  background-color:white;
+}
+footer {
+  align:center;
+  text-align:center;
+}
+.rightAlign {
+  text-align:right;
+}
+.row {
+  padding-top:.75em;
+  padding-bottom:.75em;
+}
+input[type=text] {
+  border-bottom:3px double red;
+  border-right:3px double blue;
+  border-top:3px double green;
+  border-left:3px double yellow;
+  background-image:url('images/pokeLogo.png');
+  background-size:36px;
+  background-repeat:no-repeat;
+  background-position: 5px 6px;
+  padding-left:40px;
+}
+table {
+  table-layout:fixed;
+  width:100%;
+  border-collapse:collapse;
+  background-color:white;
+  border:3px double black;
+  font-weight:bold;
+}
+th {
+  font-weight:bolder;
+}
+td, th {
+  width:25%;
+  text-align:center;
+  border:1px solid #ededed;
+}
+td:img {
+  size:110%;
+}
+tr:nth-child(odd) {
+  background-color: #f1f5ff;
+}
+tr:nth-child(even) {
+  background-color: #d7e1ff;
+}
+.type-fire {
+  background-color:#F08030;
+}
+.type-grass {
+  background-color:#78C850;
+}
+.type-water {
+  background-color:#6890F0;
+}
+.type-poison {
+  background-color:#A040A0;
+  color:white;
+}
+.type-flying {
+  background-color:#A890F0;
+}
+.type-bug {
+  background-color:#A8B820;
+}
+.type-normal {
+  background-color:#A8A878;
+}
+.type-electric {
+  background-color:#F8D030;
+}
+.type-ground {
+  background-color:#E0C068;
+}
+.type-fairy {
+  background-color:#F0B6BC;
+}
+.type-fighting {
+  background-color:#C03028;
+  color:white;
+}
+.type-psychic {
+  background-color:#F85888;
+  color:white;
+}
+.type-rock {
+  background-color:#B8A038;
+}
+.type-ice {
+  background-color:#98D8D8;
+}
+.type-ghost {
+  background-color:#705898;
+  color:white;
+}
+.type-dragon {
+  background-color:#7038F8;
+  color:white;
+}
+a:hover {
+  opacity:1;
+>>>>>>> Stashed changes
 }
