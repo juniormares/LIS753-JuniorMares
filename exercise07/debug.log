@@ -1,1 +1,5 @@
+<<<<<<< Updated upstream
 [1018/171215.026:ERROR:crash_report_database_win.cc(457)] unexpected header
+=======
+[1018/173651.919:ERROR:crash_report_database_win.cc(457)] unexpected header
+>>>>>>> Stashed changes
