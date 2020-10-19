@@ -2,6 +2,7 @@
 body {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
   font-size: 110%;
 =======
@@ -37,12 +38,18 @@ header{
 .image {
   width:80%;
 =======
+=======
+>>>>>>> Stashed changes
   font-family:"Century Gothic",CenturyGothic,AppleGothic,sans-serif;
   font-size:110%;
   /*background-color:#9BC29B;*/
   color:#08240B;
 }
+<<<<<<< Updated upstream
 /* Had to do this because placing "background-color"
+=======
+/* Had to do this because placing "background-color:"
+>>>>>>> Stashed changes
     inside of body{} was not working */
 .backgroundOfBody {
   background-color:#9BC29B;
@@ -87,12 +94,18 @@ footer {
   width: 100%;
 }
 .image {
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   padding:.4em;
   display:block;
   margin-left:auto;
   margin-right:auto;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
