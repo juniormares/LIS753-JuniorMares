@@ -7,113 +7,9 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<link rel="shorcut icon" type="image/x-icon" href="favicons/trainer.ico">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-		<style>
-			body {
-				font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-				background-color:#eee;
-			}
-			.outline {
-				outline:1px solid black;
-			}
-			h5 {
-				padding-top:1em;
-				padding-bottom:1em;
-				background-color:white;
-			}
-			footer {
-				align:center;
-				text-align:center;
-			}
-			.rightAlign {
-				text-align:right;
-			}
-			.row {
-				padding-top:.75em;
-				padding-bottom:.75em;
-			}
-			input[type=text] {
-				border-bottom:3px double red;
-				border-right:3px double blue;
-				border-top:3px double green;
-				border-left:3px double yellow;
-				background-image:url('images/pokeLogo.png');
-				background-size:36px;
-				background-repeat:no-repeat;
-				background-position: 5px 6px;
-				padding-left:40px;
-			}
-			table {
-				table-layout:fixed;
-				width:100%;
-				border-collapse:collapse;
-				background-color:white;
-				border:3px double black;
-			}
-			td, th {
-				width:25%;
-				text-align:center;
-				border:1px solid #ededed;
-			}
-			tr:nth-child(even) {
-				background-color: #dddddd;
-			}
-			.type-fire {
-				background-color:#F08030;
-			}
-			.type-grass {
-				background-color:#78C850;
-			}
-			.type-water {
-				background-color:#6890F0;
-			}
-			.type-poison {
-				background-color:#A040A0;
-				color:white;
-			}
-			.type-flying {
-				background-color:#A890F0;
-			}
-			.type-bug {
-				background-color:#A8B820;
-			}
-			.type-normal {
-				background-color:#A8A878;
-			}
-			.type-electric {
-				background-color:#F8D030;
-			}
-			.type-ground {
-				background-color:#E0C068;
-			}
-			.type-fairy {
-				background-color:#F0B6BC;
-			}
-			.type-fighting {
-				background-color:#C03028;
-				color:white;
-			}
-			.type-psychic {
-				background-color:#F85888;
-				color:white;
-			}
-			.type-rock {
-				background-color:#B8A038;
-			}
-			.type-ice {
-				background-color:#98D8D8;
-			}
-			.type-ghost {
-				background-color:#705898;
-				color:white;
-			}
-			.type-dragon {
-				background-color:#7038F8;
-				color:white;
-			}
-			a:hover {
-				opacity:1;
-			}
-		</style>
+
+    <link rel="stylesheet" href="../assets/stylesForExercise06.css" />
+
 		<title>Final Website: Kanto Dex</title>
 	</head>
 
@@ -125,46 +21,9 @@
 					<img class="col-sm-10" src ="images/pokedexHeader.png">
 				</div>
 				<div class="row justify-content-between">
-					<nav class="navbar navbar-expand-med navbar-light bg-light col-med" style="width:35%;">
-						<a class="navbar-brand">
-							<img src="images/navigate.png" style="width:130px;">
-						</a>
-						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-							<span class="navbar-toggler-icon"></span>
-						</button>
-
-						<div class="collapse navbar-collapse" id="navbarSupportedContent">
-							<ul class="navbar-nav mr-auto">
-								<li class="nav-item">
-									<a class="nav-link" href="home.html">
-										<img src="images/masterball.png" style="width:32px;opacity:.5;">
-										&nbsp;Home
-									</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link active" href="kantoPokedex.html">
-										<img src="images/pokedex.png" style="width:32px;">
-										&nbsp;Kanto Pokedex <span class="sr-only">(current)</span>
-									</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="bulbasaur.html">
-										<img src="images/bulbasaur.gif" style="width:32px;opacity:.5;">
-										&nbsp;Bulbasaur
-									</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link " href="survey.html">
-										<img src="images/unknownQuestion.png" style="width:32px;opacity:.5;">
-										&nbsp;Survey
-									</a>
-								</li>
-							</ul>
-						</div>
-					</nav>
-					<div style="text-align:right;width:60%;" class="d-flex flex-column mb-3">
+					<div style="text-align:right;width:100%;" class="d-flex flex-column mb-2">
 						<h3 class="p-2" class="align-self-center" style="font-size:125%">Kanto Dex: Original 151 Pokemon</h2>
-						<button id="showAndHide">Hide/Show Table</button>
+						<button id="showAndHide" style="background-color:white;">Hide/Show Table</button>
 					</div>
 				</div>
 				<div class="row">
@@ -186,9 +45,9 @@
 				</thead>
 				<tbody id="myTable">
 					<tr>
-						<td><a href="images/001.png"><img src="images/001.png"></a></td>
-						<td><a href="bulbasaur.html">001</a></td>
-						<td><a href="bulbasaur.html">Bulbasaur</a></td>
+						<td><img src="images/001.png"></a></td>
+						<td>001</td>
+						<td>Bulbasaur</td>
 						<td><span class="type-grass">Grass</span></td>
 						<td><span class="type-poison">Poison</span></td>
 					</tr>
@@ -1245,15 +1104,7 @@
 				</tbody>
 			</table>
 			</div>
-			<div class="row"  style="padding-bottom:1em;background-color:#b5cfe8;margin-top:1.5em;margin-bottom:2em;">
-				<div class="col" style="text-align:center;"><a class="footLinks" href="home.html">Home</a></div>
-				|
-				<div class="col" style="text-align:center;"><a class="footLinks" href="kantoPokedex.html">Kanto Dex</a></div>
-				|
-				<div class="col" style="text-align:center;"><a class="footLinks" href="bulbasaur.html">Bulbasaur</a></div>
-				|
-				<div class="col" style="text-align:center;"><a class="footLinks" href="home.html">Home</a></div>
-			</div>
+      <br /><br /><br />
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script>

@@ -1,5 +1,35 @@
 * {box-sizing: border-box;}
 body {
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-size: 110%;
+  font-family:"Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+  font-size:110%;
+  color:#08240B;
+}
+h1 {
+  color:#08240B;
+  text-align: center;
+  font-size: 220%;
+}
+h1#header{
+  background-image: url("Shrek-backdrop.jpg");
+  background-color: #71BE66;
+}
+.image {
+  width: 80%;
+  padding: .4em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+  font-size:220%;
+}
+header{
+  background-image:url("../images/Shrek-backdrop.jpg");
+  background-color:#71BE66;
+}
+.image {
+  width:80%;
   font-family:"Century Gothic",CenturyGothic,AppleGothic,sans-serif;
   font-size:110%;
   /*background-color:#9BC29B;*/
