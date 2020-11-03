@@ -53,6 +53,9 @@ ul {
 li {
   font-size: 130%;
 }
+footer {
+  background-color: #e0a874;
+}
 .topnav{
   width: 100%;
 	border:1px solid #ccc;
@@ -116,5 +119,9 @@ li {
 }
 .highlight {
   background-color: #e0a874;
+  text-align: center;
+}
+.footer-paragraph {
+  font-style: italic;
   text-align: center;
 }
