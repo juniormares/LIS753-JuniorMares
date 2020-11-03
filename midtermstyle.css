@@ -1,0 +1,120 @@
+html, body, {
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+body	{
+  width:960px;
+  padding:20px 0;
+  margin:0 auto;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-size: 110%;
+  color:#3d2b23;
+  background-color: #f7f7f7;
+}
+h2{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: underline;
+}
+h1 {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-style: italic;
+  font-weight: bold;
+  background-color: #e0a874;
+}
+figure {
+  padding-top: .75em;
+  margin-left: auto;
+  margin-right: auto;
+}
+figcaption {
+  padding-top: .5em;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  size: 80%;
+}
+img {
+  border: 3px solid #3d2b23;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  height:auto;
+}
+ul {
+  width: 75%;
+}
+li {
+  font-size: 130%;
+}
+.topnav{
+  width: 100%;
+	border:1px solid #ccc;
+	border-width:1px 0;
+	margin:0;
+	padding:0;
+	text-align: center;
+  position: fixed;
+  overflow: hidden;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #e3dcd3;
+}
+.topnav a{
+	display:inline-block;
+	padding:10px;
+  color: #3d2b23;
+  font-weight: bolder;
+  letter-spacing: .1em;
+  text-decoration:none;
+}
+.topnav a:hover{
+	text-decoration: none;
+  border-bottom: 3px solid #e0a874;
+  background-color: #f7e7d2;
+}
+.green-background {
+  background-color: #74a753;
+  padding-top: .3em;
+  padding-bottom: .2em;
+  margin-bottom: 1em;
+}
+.red-background {
+  background-color: #e65d3e;
+  padding-top: .3em;
+  padding-bottom: .2em;
+  margin-bottom: 1em;
+}
+.yellow-background {
+  background-color: #f5c43d;
+  padding-top: .3em;
+  padding-bottom: .2em;
+  margin-bottom: 1em;
+}
+.blue-background {
+  background-color: #76c2e8;
+  padding-top: .3em;
+  padding-bottom: .2em;
+  margin-bottom: 1em;
+}
+.center-content {
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+.italic {
+  font-style: italic;
+  text-align: center;
+}
+.highlight {
+  background-color: #e0a874;
+  text-align: center;
+}
